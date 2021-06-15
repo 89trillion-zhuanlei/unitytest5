@@ -7,7 +7,7 @@ public class RewardItem : MonoBehaviour
 	[SerializeField] private Text levelNum;
 	[SerializeField] private Text clickBtnText;
 	[SerializeField] private Text showText;
-	[SerializeField] private GameObject[] showObj;
+	[SerializeField] private GameObject[] showObj;//两种状态。1：可点击 2：不可点击
 	private int idx;//标记当前数据索引
 	void ScrollCellIndex (int idx)
 	{

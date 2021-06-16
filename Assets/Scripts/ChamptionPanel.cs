@@ -26,7 +26,6 @@ public class ChamptionPanel : MonoBehaviour
     public void ClickShowBtn()
     {
         newShowReward = Instantiate(showReward, transform);
-        //showReward.SetActive(true);
         outPanel.SetActive(false);
         closeBtn.SetActive(true);
     }

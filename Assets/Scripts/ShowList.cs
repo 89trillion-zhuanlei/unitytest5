@@ -7,7 +7,7 @@ public class ShowList : MonoBehaviour
 {
     [SerializeField] private Text score;
 
-    private void Start()
+    private void OnEnable()
     {
         if (GlobalChampData.score / 1000 >= 4)
         {

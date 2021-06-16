@@ -8,7 +8,9 @@ public class ChamptionPanel : MonoBehaviour
     [SerializeField] private GameObject showReward;//奖励界面列表
     [SerializeField] private GameObject outPanel;//查看，加分等UI界面
     [SerializeField] private GameObject closeBtn;
-    private GameObject newShowReward;//奖励列表展示UI
+
+    private GameObject newShowReward;
+    //private GameObject newShowReward;//奖励列表展示UI
     /// <summary>
     /// 点击事件监听 加分按钮点击事件
     /// </summary>
@@ -24,6 +26,7 @@ public class ChamptionPanel : MonoBehaviour
     public void ClickShowBtn()
     {
         newShowReward = Instantiate(showReward, transform);
+        //showReward.SetActive(true);
         outPanel.SetActive(false);
         closeBtn.SetActive(true);
     }
@@ -34,6 +37,7 @@ public class ChamptionPanel : MonoBehaviour
     public void ClickCloseBtn()
     {
         Destroy(newShowReward);
+        //showReward.SetActive(false);
         outPanel.SetActive(true);
         closeBtn.SetActive(false);
     }
@@ -45,7 +49,7 @@ public class ChamptionPanel : MonoBehaviour
     {
         if (GlobalChampData.score > 4000)
         {
-            GlobalChampData.score=GlobalChampData.score/2;
+            GlobalChampData.score=4000+(GlobalChampData.score-4000)/2;
             scorText.text = GlobalChampData.score.ToString();
             for (int i = 0; i < GlobalChampData.globalData.Length; i++)
             {

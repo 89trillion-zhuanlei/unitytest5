@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class RewardItem : MonoBehaviour
 	[SerializeField] private Text showText;
 	[SerializeField] private GameObject[] showObj;//两种状态。1：可点击 2：不可点击
 	private int idx;//标记当前数据索引
+
 	void ScrollCellIndex (int idx)
 	{
 		this.idx = idx;
